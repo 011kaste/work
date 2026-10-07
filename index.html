@@ -10,23 +10,23 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alessandro Castellani Portfolio">
 <meta property="og:description" content="Communication designer and strategist. Ask a question, then browse the full portfolio.">
-<meta property="og:image" content="https://011kaste.github.io/portfolio/assets/idle.jpg?v=3">
+<meta property="og:image" content="https://011kaste.github.io/work/assets/idle.jpg?v=3">
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
 <meta property="og:url" content="https://011kaste.github.io/work/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alessandro Castellani Portfolio">
 <meta name="twitter:description" content="Communication designer and strategist. Ask a question, then browse the full portfolio.">
-<meta name="twitter:image" content="https://011kaste.github.io/portfolio/assets/idle.jpg?v=3">
+<meta name="twitter:image" content="https://011kaste.github.io/work/assets/idle.jpg?v=3">
 
-<link rel="icon" href="/portfolio/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
-<link rel="preload" as="image" href="/portfolio/assets/idle.jpg?v=3">
-<link rel="preload" as="image" href="/portfolio/assets/speak2.jpg?v=3">
-<link rel="preload" as="image" href="/portfolio/assets/speak3.jpg?v=3">
-<link rel="preload" as="image" href="/portfolio/assets/speak4.jpg?v=3">
+<link rel="preload" as="image" href="assets/idle.jpg?v=3">
+<link rel="preload" as="image" href="assets/speak2.jpg?v=3">
+<link rel="preload" as="image" href="assets/speak3.jpg?v=3">
+<link rel="preload" as="image" href="assets/speak4.jpg?v=3">
 
 <style>
 /* Base rules the page relies on */
@@ -86,11 +86,11 @@ button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px;b
 #sceneWrap{position:absolute;inset:0;overflow:hidden;background:var(--room)}
 .sceneLayer{position:absolute;inset:-1.5%;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;transition:opacity .13s linear,transform .18s ease-out;will-change:opacity,transform;transform:scale(1.018)}
 .sceneLayer.visible{opacity:1}
-#sceneIdle,#scene1{background-image:url("/portfolio/assets/idle.jpg?v=3")}
+#sceneIdle,#scene1{background-image:url("assets/idle.jpg?v=3")}
 #sceneIdle{opacity:1}
-#scene2{background-image:url("/portfolio/assets/speak2.jpg?v=3")}
-#scene3{background-image:url("/portfolio/assets/speak3.jpg?v=3")}
-#scene4{background-image:url("/portfolio/assets/speak4.jpg?v=3")}
+#scene2{background-image:url("assets/speak2.jpg?v=3")}
+#scene3{background-image:url("assets/speak3.jpg?v=3")}
+#scene4{background-image:url("assets/speak4.jpg?v=3")}
 .vignette,.grain,.overlay{position:absolute;inset:0;pointer-events:none}
 .overlay{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.055));z-index:10}
 .vignette{background:radial-gradient(circle at 50% 45%,transparent 42%,rgba(0,0,0,.13) 100%);z-index:11}
@@ -311,7 +311,7 @@ a.pill{text-decoration:none;display:inline-block}
         </svg>
       </button>
       <div class="cvEnv">
-        <img class="cvEnvImg" src="/portfolio/assets/cv-envelope.webp?v=3" width="466" height="226" alt="" decoding="async">
+        <img class="cvEnvImg" src="assets/cv-envelope.webp?v=3" width="466" height="226" alt="" decoding="async">
         <button class="cvEnvHit" id="cvFolder" type="button" aria-label="Open the CV" title="CV (V)"></button>
       </div>
     </div>
@@ -411,7 +411,7 @@ a.pill{text-decoration:none;display:inline-block}
   <header class="bookBar">
     <div class="bookTitle">Alessandro Castellani · Portfolio<span class="where" id="where"></span></div>
     <div class="bookActions">
-      <a class="pill" id="downloadPdf" href="/portfolio/assets/portfolio.pdf" download="Alessandro_Castellani_Portfolio.pdf">Download PDF</a>
+      <a class="pill" id="downloadPdf" href="assets/portfolio.pdf" download="Alessandro_Castellani_Portfolio.pdf">Download PDF</a>
       <button class="pill" id="bookClose" type="button">Close<span class="hideNarrow"> portfolio</span><span class="kbd" aria-hidden="true">Esc</span></button>
     </div>
     <nav class="bookIndex" id="bookIndex" aria-label="Portfolio index"></nav>
@@ -514,8 +514,8 @@ function buildBook(){
     img.loading=i<2?"eager":"lazy";
     img.alt=`Portfolio ${label}`;
     img.sizes=p.single?"(max-width: 798px) calc(100vw - 32px), 750px":"(max-width: 1548px) calc(100vw - 48px), 1500px";
-    img.srcset=`/portfolio/pages/sm/${p.id}.webp ${Math.round(w/2)}w, /portfolio/pages/lg/${p.id}.webp ${w}w`;
-    img.src=`/portfolio/pages/sm/${p.id}.webp`;
+    img.srcset=`pages/sm/${p.id}.webp ${Math.round(w/2)}w, pages/lg/${p.id}.webp ${w}w`;
+    img.src=`pages/sm/${p.id}.webp`;
     btn.appendChild(img);
     btn.addEventListener("click",e=>openZoom(p,e,img));
     fig.appendChild(btn);frag.appendChild(fig);
@@ -583,7 +583,7 @@ function openZoom(p,e,img){
   zoom.hidden=false;
   const center=()=>{zoomScroll.scrollLeft=fx*zoomScroll.scrollWidth-zoomScroll.clientWidth/2;zoomScroll.scrollTop=fy*zoomScroll.scrollHeight-zoomScroll.clientHeight/2};
   zoomImg.onload=center;
-  zoomImg.src=`/portfolio/pages/lg/${p.id}.webp`;
+  zoomImg.src=`pages/lg/${p.id}.webp`;
   if(zoomImg.complete)requestAnimationFrame(center);
   $("zoomClose").focus({preventScroll:true});
 }
@@ -603,7 +603,7 @@ new ResizeObserver(sizeStage).observe(stageWrap);sizeStage();
 stageWrap.style.transform="scale(1.018)";
 // If a real photo of the phone is added as assets/nokia.png, use it instead of the drawing.
 const nokia=document.getElementById('nokia'),nk=document.getElementById('nk');
-(()=>{const im=new Image();im.onload=()=>{nokia.replaceChildren(im)};im.alt='';im.src='/portfolio/assets/nokia.png'})();
+(()=>{const im=new Image();im.onload=()=>{nokia.replaceChildren(im)};im.alt='';im.src='assets/nokia.png'})();
 
 // ---- Contacts (the Nokia) ----
 const phoneModal=document.getElementById('phoneModal'),bigPhone=document.getElementById('bigPhone'),lcdList=document.getElementById('lcdList'),lcdVal=document.getElementById('lcdVal'),lcdToast=document.getElementById('lcdToast'),lcdCount=document.getElementById('lcdCount');
